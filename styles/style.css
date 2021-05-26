@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #263238;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4f5b62), to(#263238));
+  background-image: linear-gradient(#4f5b62, #263238);
+  background-repeat: no-repeat;
+  color: #FFF;
+}
+
+button {
+  width: 150px;
+  margin-top: 5px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border-style: none;
+  background-color: #869ba7;
+  color: #FFF;
+  font-weight: bolder;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+button:hover {
+  background-color: #4f5c63;
+  -webkit-transition: background-color 0.3s ease-in-out 0s;
+  transition: background-color 0.3s ease-in-out 0s;
+}
+
+#h1_title {
+  text-align: center;
+}
+
+.setting_div {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #FFF;
+  border-radius: 10px;
+  color: #000;
+}
+
+.setting_div .setting_div_title_box, .setting_div .solution_div_title_box {
+  padding: 8px;
+  background-color: #49a7cc;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #FFF;
+}
+
+.setting_div .solution_div_title_box {
+  background-color: #f1ae56;
+}
+
+.setting_div #color_buttons_div, .setting_div #game_setting_buttons_div {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.setting_div #game_setting_buttons_div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.setting_div #game_setting_buttons_div input {
+  color: black;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  line-height: 24px;
+  width: 40px;
+  float: right;
+}
+
+.setting_div #game_setting_buttons_div label {
+  float: left;
+  padding-right: 5px;
+}
+
+.setting_div .loading_text {
+  line-height: 40px;
+}
+
+.setting_div .setting_main_box {
+  padding: 12px;
+  line-height: 24px;
+}
+
+.setting_div .setting_main_box .ball_color_control_div {
+  text-align: start;
+  min-width: 125px;
+}
+
+.setting_div .setting_main_box table {
+  margin: 10px auto 30px;
+  border-collapse: collapse;
+  font-weight: bolder;
+}
+
+.setting_div .setting_main_box table th {
+  line-height: 28px;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.setting_div .setting_main_box table td {
+  line-height: 28px;
+  padding: 5px 15px;
+  color: black;
+  border-top: 1px solid #4f5b62;
+}
+
+.setting_div .setting_main_box .time_elapsed_text {
+  margin-bottom: 5px;
+}
+
+#displayDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+#displayDiv .outterDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#displayDiv .outterDiv .tube {
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 210px;
+  width: 54px;
+  border: 1px solid #FFF;
+  border-top: none;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+
+#displayDiv .outterDiv .tube .ball {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  margin: auto;
+  height: 48px;
+  width: 48px;
+  border: 1px solid #FFF;
+  border-radius: 100%;
+  background-color: attr(data-ball-color);
+}
+
+#displayDiv .outterDiv .tube .ball select, #displayDiv .outterDiv .tube .ball option {
+  margin: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+#displayDiv .outterDiv .tube_number {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 0.75rem;
+}
+
+#creditDiv {
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#creditDiv a, #creditDiv a:visited {
+  color: #49a7cc;
+  font-weight: bolder;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

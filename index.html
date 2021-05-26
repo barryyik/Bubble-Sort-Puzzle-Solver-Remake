@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/solver.js" defer></script>
+    <script src="js/validate.js" defer></script>
+    <script src="js/getBallArray.js" defer></script>
+    <script src="js/randomizeBalls.js" defer></script>
+    <script src="js/solutionInnerHTML.js" defer></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Bubble Sort Puzzle Solver (Remake)</title>
+</head>
+<body>
+    <h1 id='h1_title'>The Bubble Sort Puzzle Solver</h1>
+    <div id='gameSettingDiv' class='setting_div'>
+        <div class="setting_div_title_box"><h3>Game Setting</h3></div>
+        <div id="game_setting_buttons_div" class="setting_main_box">
+            <div class='game_setting_input_wrapper'>
+                <label for="input_num_of_total_tubes">Total Number of Tubes:</label>
+                <input type="number" class='to_be_disabled' id="input_num_of_total_tubes" name="input_num_of_total_tubes" min="3" max="30" value="">
+            </div>
+            <div class='game_setting_input_wrapper'>
+                <label for="input_num_of_empty_tubes">Number of Empty Tubes:</label>
+                <input type="number" class='to_be_disabled' id="input_num_of_empty_tubes" name="input_num_of_total_tubes" min="1" max="30" value="">
+            </div>
+            <button id='randomize_btn'>Randomize Balls</button>
+            <button id='reset_btn'>Reset</button>
+            <button id='solve_btn'>Solve Now</button>
+        </div>
+    </div>
+    <div id='controlDiv' class='setting_div'>
+        <div class="setting_div_title_box"><h3>Color Setting</h3></div>
+        <div id="color_buttons_div" class="setting_main_box"></div>
+    </div>
+    <div id='solutionDiv' class='setting_div'></div>
+    <div id='displayDiv'></div>
+    <div id='creditDiv'>
+        <p>Version 1.0.0 (May 2021)</p>
+        <p>Made by <a href="https://github.com/barryyik">Barry Yik</a> </p>
+    </div>
+</body>
+</html>

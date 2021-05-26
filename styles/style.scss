@@ -1,0 +1,163 @@
+@import './variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: $bodyBackgroundColor1;
+    background-image: linear-gradient($bodyBackgroundColor2, $bodyBackgroundColor1);
+    background-repeat: no-repeat;
+    color: $generalTextColor;
+}
+
+button {
+    width: 150px;
+    margin-top: 5px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #869ba7;
+    color: #FFF;
+    font-weight: bolder;
+    align-self: center;
+    &:hover {
+        background-color: #4f5c63;
+        transition: background-color 0.3s ease-in-out 0s;
+    }
+}
+
+#h1_title {
+    text-align: center;
+}
+
+.setting_div {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: $settingDivMainBackgroundColor;
+    border-radius: 10px;
+    color: $settingDivMainTextColor;
+    .setting_div_title_box, .solution_div_title_box {
+        padding: 8px;
+        background-color: $settingDivTitleBoxBackgroundColor;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: $settingDivTitleBoxTextColor;
+    }
+    .solution_div_title_box {
+        background-color: $solutionDivTitleBoxBackgroundColor;
+    }
+    #color_buttons_div, #game_setting_buttons_div {
+        width: fit-content;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #game_setting_buttons_div {
+        flex-direction: column;
+        input {
+            color: black;
+            width: fit-content;
+            align-self: center;
+            line-height: 24px;
+            width: 40px;
+            float: right;
+        }
+        label {
+            float: left;
+            padding-right: 5px;
+        }
+    }
+    .loading_text {
+        line-height: 40px;
+    }
+    .setting_main_box {
+        padding: 12px;
+        line-height: 24px;
+        .ball_color_control_div {
+            text-align: start;
+            min-width: 125px;
+        }
+        table {
+            margin: 10px auto 30px;
+            border-collapse: collapse;
+            font-weight: bolder;
+            th {
+                line-height: 28px;
+                text-align: center;
+                padding: 10px 15px;
+            }
+            td {
+                line-height: 28px;
+                padding: 5px 15px;
+                color: black;
+                border-top: 1px solid $bodyBackgroundColor2;
+            }
+        }
+        .time_elapsed_text {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+#displayDiv {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: auto;
+    .outterDiv {
+        display: flex;
+        flex-direction: column;
+        .tube {
+            margin: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: #{$ballDiameter * 4 + 18px};
+            width: #{$ballDiameter + 6px};
+            border: 1px solid $tubeColor;
+            border-top: none;
+            border-bottom-left-radius: #{$ballDiameter / 2 + 4px};
+            border-bottom-right-radius: #{$ballDiameter / 2 + 4px};
+            .ball {
+                display: flex;
+                align-self: center;
+                margin: auto;
+                height: #{$ballDiameter};
+                width: #{$ballDiameter};
+                border: 1px solid $ballBorderColor;
+                border-radius: 100%;
+                background-color: attr(data-ball-color);
+                select, option {
+                    margin: auto;
+                    align-self: center;
+                    background-color: rgba(255, 255, 255, 0.8);
+                    color: #000;
+                }
+            }
+        }
+        .tube_number {
+            align-self: center;
+            font-size: 0.75rem;
+        }
+    }
+}
+
+#creditDiv {
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 14px;
+    a, a:visited {
+        color: $settingDivTitleBoxBackgroundColor;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+}
